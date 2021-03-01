@@ -16,8 +16,8 @@ write (ColNamesOut, file = "tidy_output.txt", append = TRUE)
 inn <- read.table("in.csv",header=head, sep =";")
 
 # IMPORTANT! Add time scale default 5 min
-incubation_time <-length(input_data[,1])
-time <-5*c(0:(incubation_time-1)) # set time scale here
+incubation_time <-length(inn[,1])
+time <-5*c(0:(inn-1)) # set time scale here
 
 # Merging data & calculated log OD
 inn <-cbind(time,input_data)
