@@ -13,7 +13,7 @@ ColNamesOut <- paste("conditions", "Mu","tau12, h", "starting OD", "OD10h", "OD1
 write (ColNamesOut, file = "tidy_output.txt", append = TRUE)
 
 # Read table - CHECK SEPARATORS!
-inn <- read.table("in.csv",header=head, sep =";")
+inn <- read.table("in.csv",header=TRUE, sep =";")
 
 # IMPORTANT! Add time scale default 5 min
 incubation_time <-length(inn[,1])
